@@ -1,0 +1,29 @@
+header {
+	padding: 20px 0 156px 0;
+}
+
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) {
+    header {
+    	
+    }
+}
+
+
+@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : portrait) {
+
+}
+
+/* TABLET LANDSCAPE
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : landscape) {
+ 
+}
+
+/* DESKTOP
+ *************************************************************/
+@media only screen and (min-width: $desktop-sml) {
+
+}

@@ -1,0 +1,52 @@
+.main-navigation {
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $col-charcoal;
+    }
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) {
+    .main-navigation {
+        clear: both;
+        ul {
+            overflow: hidden;
+            width: 100%;
+            padding: 0 15%;
+            li {
+                float: left;
+                width: 20%;
+
+                a {
+                    display: block; 
+                    width: 59px;      
+                    margin: 0 auto;          
+                }
+
+                &.main-link a{
+                    color: $col-green;
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : portrait) {
+
+}
+
+/* TABLET LANDSCAPE
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : landscape) {
+ 
+}
+
+/* DESKTOP
+ *************************************************************/
+@media only screen and (min-width: $desktop-sml) {
+
+}

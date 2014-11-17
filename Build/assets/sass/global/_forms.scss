@@ -1,0 +1,19 @@
+input[type=text], input[type=password], textarea {
+	width: 100%;
+	padding: 12px;
+	margin: 6px 0 4px;
+	border: 1px solid $col-charcoal;
+	background: $col-light-grey;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+.btn {
+	border-radius: 3px;
+	color: $col-charcoal;
+	border: 2px solid $col-charcoal;
+	text-transform: uppercase;
+}

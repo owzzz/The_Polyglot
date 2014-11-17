@@ -1,0 +1,15 @@
+@import "vendor/all";
+@import "mixins/all";
+@import "global/all";
+@import "modules/all";
+@import "layout/all";
+
+.main-wrapper {
+	width: 100%;
+ 	max-width: $desktop-md;
+ 	margin: 0 auto;
+}
+
+.main-content {
+	width: 100%;
+}
