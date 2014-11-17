@@ -56,7 +56,8 @@ module.exports = function(grunt) {
         connect: {
             options: {
                 port: 9000,
-                hostname: 'localhost'
+                hostname: 'localhost',
+                livereload: true
             },
             dist: {
                 options: {
@@ -114,14 +115,28 @@ module.exports = function(grunt) {
         // Browserify
         // https://github.com/jmreidy/grunt-browserify
         browserify: {
+            options: {
+                alias: browserifySiteConfig,
+            },
             build: {
                 files: {
                     '<%= thePolyGlot.distributionPath %>/assets/js/main.min.js': ['<%= thePolyGlot.buildPath %>/assets/js/main.js']
                 },
                 options: {
-                    alias: browserifySiteConfig,
-                    debug: true
+                    browserifyOptions: {
+                        debug: true
+                    }
                 }
+            },
+            dist: {
+                files: {
+                    '<%= thePolyGlot.distributionPath %>/assets/js/main.min.js': ['<%= thePolyGlot.buildPath %>/assets/js/main.js']
+                },
+                options: {
+                    browserifyOptions: {
+                        debug: false
+                    }
+                }   
             }
         },
         // Autoprefixer
@@ -174,7 +189,7 @@ module.exports = function(grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'assets/img/**',
-                        'assets/js/vendor/modernizr.js',
+                        'assets/js/vendor/modernizr/modernizr.js',
                         'assets/fonts/**'
                     ]
                 }]
@@ -216,7 +231,7 @@ module.exports = function(grunt) {
         'jshint',
 
         // Concat Required Browserify Modules
-        'browserify',
+        'browserify:build',
 
         // Sass compilation and sprite generation
         'compass',
@@ -235,5 +250,11 @@ module.exports = function(grunt) {
 
         // Watch for file changes
         'watch'
+    ]);
+
+    grunt.registerTask('dist', [
+        // shared build tasks
+        'build'
+        
     ]);
 };
