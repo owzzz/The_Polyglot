@@ -1,6 +1,27 @@
 header {
-	padding: 20px 0 156px 0;
-	display: table;
+	height: 60px;
+	box-shadow: $boxShadow;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $col-white;
+
+	.main-logo {
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		width: 200px;
+		height: 40px;
+		background: url($logoIcon) 0px 0px no-repeat, url($logoText) 43px 8px no-repeat;
+		background-size: 35px 35px, 100px 20px;
+		overflow: hidden;
+
+		a {
+			display: block;
+			cursor: pointer;
+			text-indent:-9999px;
+		}
+	}
 }
 
 
@@ -8,8 +29,8 @@ header {
  *************************************************************/
 @media only screen and (min-device-width : $tablet-portrait-sml) {
     header {
-
-    }
+		padding: 20px 0 156px 0;
+	}
 }
 
 

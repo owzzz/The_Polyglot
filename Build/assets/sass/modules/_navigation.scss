@@ -11,12 +11,12 @@
     opacity: 0;
     transition-property: opacity;
     transition-timing-function: ease-in-out;
-    transition-duration: 250ms;  
-    
+    transition-duration: 250ms; 
+        
     ul {
         display: table-cell;
         vertical-align: middle;
-        padding: 50% 20px;
+        padding: 40% 20px;
         opacity: 0;
         transform: scale(0.2,0.2);
         transition-property: all;
@@ -49,9 +49,71 @@
     }
 }
 
+// Burger Menu Icon Styles
+.icon-nav {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &, &:before, &:after {
+        border-radius: 2px;
+        height: 3px;
+        width: 40px;
+        background: $col-charcoal;
+        position: absolute;
+        display: block;
+        content: '';
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      bottom: -10px; 
+    }
+} 
+
+.main-navigation.open ~ .icon-nav {
+    background: $col-white;
+    height: 40px;
+    top: 14px;
+
+    &:before {
+        content: "";
+        height: 3px;
+        display: block;
+        background: $col-charcoal;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 19px;
+        position: absolute;
+        border-radius: 2px;
+    }
+
+    &:after {
+        content: "";
+        height: 3px;
+        display: block;
+        background: $col-charcoal;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 19px;
+        position: absolute;
+        border-radius: 2px;
+    }
+}
+
 /* TABLET PORTRAIT
  *************************************************************/
 @media only screen and (min-device-width : $tablet-portrait-sml) {
+
     .main-navigation {
         clear: both;
         ul {
@@ -74,6 +136,10 @@
                 }
             }
         }
+    }
+
+    .icon-nav {
+        display: none;
     }
 }
 

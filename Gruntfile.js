@@ -115,17 +115,13 @@ module.exports = function(grunt) {
         // Browserify
         // https://github.com/jmreidy/grunt-browserify
         browserify: {
-            options: {
-                alias: browserifySiteConfig,
-            },
             build: {
                 files: {
                     '<%= thePolyGlot.distributionPath %>/assets/js/main.min.js': ['<%= thePolyGlot.buildPath %>/assets/js/main.js']
                 },
                 options: {
-                    browserifyOptions: {
-                        debug: true
-                    }
+                    alias: browserifySiteConfig,
+                    debug: true
                 }
             },
             dist: {
@@ -133,10 +129,9 @@ module.exports = function(grunt) {
                     '<%= thePolyGlot.distributionPath %>/assets/js/main.min.js': ['<%= thePolyGlot.buildPath %>/assets/js/main.js']
                 },
                 options: {
-                    browserifyOptions: {
-                        debug: false
-                    }
-                }   
+                    alias: browserifySiteConfig,
+                    debug: false
+                }
             }
         },
         // Autoprefixer
@@ -188,7 +183,7 @@ module.exports = function(grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'assets/img/**',
+                        'assets/img/**/*.{jpg,png,gif,svg}',
                         'assets/js/vendor/modernizr/modernizr.js',
                         'assets/fonts/**'
                     ]
