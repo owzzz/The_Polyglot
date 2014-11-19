@@ -1,4 +1,12 @@
-input[type=text], input[type=password], textarea {
+.form-element {
+	margin-bottom: 20px;
+}
+
+form {
+	margin-bottom: 40px;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
 	width: 100%;
 	padding: 12px;
 	margin: 6px 0 4px;
@@ -9,6 +17,13 @@ input[type=text], input[type=password], textarea {
 	line-height: normal;
 	box-sizing: border-box;
 	border-radius: 2px;
+}
+
+label {
+	margin-bottom: 10px;
+	span {
+		font-size: 11px;
+	}
 }
 
 .btn {

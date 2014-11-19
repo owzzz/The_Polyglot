@@ -2,9 +2,9 @@ header {
 	height: 60px;
 	box-shadow: $boxShadow;
 	position: fixed;
-	top: 0;
 	width: 100%;
 	background: $col-white;
+	transition: top 0.2s ease-in-out;
 
 	.main-logo {
 		position: absolute;
@@ -21,6 +21,14 @@ header {
 			cursor: pointer;
 			text-indent:-9999px;
 		}
+	}
+
+	&.show {
+		top: 0;
+	}
+
+	&.hide {
+		top: -60px;
 	}
 }
 
@@ -41,7 +49,7 @@ header {
 /* TABLET LANDSCAPE
  *************************************************************/
 @media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : landscape) {
- 
+
 }
 
 /* DESKTOP

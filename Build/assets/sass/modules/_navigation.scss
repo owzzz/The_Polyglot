@@ -55,14 +55,14 @@
     position: absolute;
     top: 30px;
     right: 20px;
-    width: 40px;
+    width: 25px;
     height: 40px;
     cursor: pointer;
 
     &, &:before, &:after {
         border-radius: 2px;
         height: 3px;
-        width: 40px;
+        width: 25px;
         background: $col-charcoal;
         position: absolute;
         display: block;
@@ -70,11 +70,11 @@
     }
 
     &:before {
-      top: -10px;
+      top: -7px;
     }
 
     &:after {
-      bottom: -10px; 
+      bottom: -7px; 
     }
 } 
 
