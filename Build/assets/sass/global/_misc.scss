@@ -1,0 +1,39 @@
+.center-text {
+	text-align: center;
+}
+
+.validation-error {
+	float: left;
+	font-size: 11px;
+	color: $col-red;
+}
+
+.validation-successfull {
+	border: 1px solid $col-green;
+	border-radius: 2px;
+	background: lighten($col-green, 20%);
+	color: $col-white;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px;
+	opacity: 0;
+
+	animation-name: fadeInOut;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 0s;
+	animation-play-state: running;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+// Keyframe Animations
+@-webkit-keyframes fadeInOut {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    100%  {opacity: 0;}
+} 

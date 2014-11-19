@@ -2,21 +2,6 @@
 @import "mixins/all";
 @import "global/all";
 @import "modules/all";
-@import "layout/all";
+@import "layout";
 
-.main-wrapper {
-	width: 100%;
- 	max-width: $desktop-md;
- 	margin: 0 auto;
- 	position: relative;
-}
 
-.main-content {
-	width: 100%;
-	margin-top: 80px;
-	padding: 20px;
-
-	p {
-		text-align: center;
-	}
-}

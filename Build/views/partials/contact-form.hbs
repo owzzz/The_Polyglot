@@ -1,0 +1,38 @@
+<div class="form-container">
+	<form name="contactForm" ng-submit="submitUserDetails()" class="contact-form">
+		<div class="form-element">
+			<label for="firstName">First Name<span>*</span></label>
+			<input type="text" id="firstName" name="firstName" ng-model="user.firstName" required/>
+			<p class="validation-error">Please enter a first name.</p>
+		</div>
+		<div class="form-element">
+			<label for="lastName">Last Name<span>*</span></label>
+			<input type="text" id="lastName" name="lastName" ng-model="user.lastName" required/>
+			<p class="validation-error">Please enter a last name.</p>
+		</div>
+		
+		<div class="form-element">
+			<label for="email">Email<span>*</span></label>
+			<input type="email" id="email" name="email" ng-model="user.email" required/>
+			<p class="validation-error">Please enter a valid email.</p>
+		</div>
+		
+		<div class="form-element">
+			<label for="enquiryReason">What's it about?<span>*</span></label>
+			<input type="text" id="enquiryReason" name="enquiryReason" ng-model="user.enquiryReason" required/>
+			<p class="validation-error">Please enter a reason for your enquiry.</p>
+		</div>
+		
+		<div class="form-element">
+			<label for="howHelp">How can I help you?<span>*</span></label>
+			<textarea ng-model="user.help" id="howHelp" name="howHelp" required></textarea>
+			<p class="validation-error">Please let me know how I can help.</p>
+		</div>
+		<div class="form-element ng-cloak">
+			<p class="validation-successfull" ng-show="userCreated">The User <strong>\{{savedUser.firstName}} \{{savedUser.lastName}}</strong> was created</p>	
+		</div>
+		<div class="form-element">
+			<input type="submit" value="submit" class="btn" ng-disabled="contactForm.$invalid">
+		</div>
+	</form>
+</div>

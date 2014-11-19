@@ -1,0 +1,36 @@
+.admin-panel {
+	overflow: hidden;
+}
+/* TABLET PORTRAIT
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) {
+	.admin-panel {
+		border-top: 1px solid $col-charcoal;
+		border-left: 1px solid $col-charcoal;
+		
+		li {
+			border-bottom: 1px solid $col-charcoal;
+			overflow: hidden;
+
+			&:nth-child(odd) {
+				background: darken($col-white, 4%);
+			}
+		}
+		
+	    .col {
+			float: left;
+			width: 20%;
+			border-right: 1px solid $col-charcoal;
+			padding: 10px;
+			font-size: 13px;
+
+			&.col-header {
+				background: $col-green;
+				color: $col-white;
+				text-align: center;
+				font-weight: bold;
+				font-size: 15px;
+			}
+		}	
+	}
+}

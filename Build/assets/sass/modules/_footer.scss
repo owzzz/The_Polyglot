@@ -2,18 +2,20 @@ footer {
 	position: fixed;
 	width: 100%;
 	padding: 20px 0;
-	height: 60px;
+	height: 70px;
 	background: $col-white;
 	z-index: 0;
 	text-align: center;
 	transition: bottom 0.2s ease-in-out;
+	max-width: $tablet-portrait-sml - 68;
+	margin: 0 auto;
 	
 	&.show {
 		bottom: 0;
 	}
 
 	&.hide {
-		bottom: -60px;
+		bottom: -70px;
 	}
 
 	p {
@@ -21,4 +23,19 @@ footer {
 		font-weight: bold;
 	}
 
+}
+
+
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) {
+    footer {
+		left: 0;
+		right: 0;
+		
+		&.show {
+			bottom: 20px;
+		}
+	}
 }

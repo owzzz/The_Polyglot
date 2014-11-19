@@ -7,7 +7,7 @@ $logoText: "/assets/img/icons/type_logo.svg";
 	color: $col-white;
 	border: none;
 	border-radius: 0px;
-	padding-left: 38px;
+	padding: 14px 10px 14px 38px;
 	position: relative;
 	font-size: 10px;
 
@@ -19,5 +19,6 @@ $logoText: "/assets/img/icons/type_logo.svg";
 		height: 18px;
 		position: absolute;
 		left: 10px;
+		top: 10px;
 	}
 }

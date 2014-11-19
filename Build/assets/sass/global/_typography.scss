@@ -20,3 +20,21 @@ a {
 	color: $col-green;
 	font-weight: bold;
 }
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	p, li, label{
+		font-size: 18px;
+		line-height: 32px;
+		font-family: $secondary-font-light;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $desktop-md) {
+	p, li, label{
+		font-size: 20px;
+	}
+}

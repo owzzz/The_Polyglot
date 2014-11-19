@@ -8,13 +8,11 @@
 	/* angular Route */	   require('angular-route');
 
 
-	var app = angular.module('thePolyGlot', ['ngRoute']);
+	var app = angular.module('thePolyGlot', ['ngRoute', 'firebase']);
 
 	app.controller('appCtrl', ['$scope', function($scope) {
-		console.log('appCtrl', $scope);
-	}]);
 
-	app.directive('iconNav', function() {
+	}]).directive('iconNav', function() {
 	   return {
 	       restrict:'ECA',
            link:function (scope, el, attrs, ctrl) {
@@ -28,9 +26,7 @@
                 });
 	       }
 	   }
-	});
-
-    app.directive('header', function() {
+	}).directive('header', function() {
         return {
             restrict: 'ECA',
             controller: "appCtrl",
@@ -55,8 +51,9 @@
                     var st = $(window).scrollTop();
                     
                     // Make sure they scroll more than delta
-                    if(Math.abs(lastScrollTop - st) <= delta)
+                    if(Math.abs(lastScrollTop - st) <= delta){
                         return;
+                    }
                     
                     // If they scrolled down and are past the navbar, add class .nav-up.
                     // This is necessary so you never see what is "behind" the navbar.
@@ -74,52 +71,114 @@
                 }
             }
         }
-    });
+    }).controller('contactFormCtrl', ['$scope', '$firebase', function($scope, $firebase) {
+        $scope.usersRef = new Firebase("https://thepolyglot.firebaseio.com/").child('users');
+        $scope.users = $firebase($scope.usersRef).$asObject();
 
-    app.directive('footer', function() {
-            return {
-                restrict: 'ECA',
-                controller: "appCtrl",
-                link: function(scope, el, attrs, ctrl) {
-                    var didScroll;
-                    var lastScrollTop = 0;
-                    var delta = 5;
-                    var navbarHeight = $('footer').outerHeight();
+        $scope.user = {};
+        $scope.userCreated = false;
 
-                    $(window).scroll(function(event){
-                        didScroll = true;
-                    });
+        $scope.submitUserDetails = function() {
+            $scope.usersRef.push($scope.user, function() {
+                $scope.savedUser = angular.copy($scope.user);
+                $scope.userCreated = true;
+                $scope.setFormPristine($scope.contactForm);
+                $scope.user = {};
+                console.log($scope);
+            });
+        };
 
-                    setInterval(function() {
-                        if (didScroll) {
-                            hasScrolled();
-                            didScroll = false;
-                        }
-                    }, 250);
-
-                    function hasScrolled() {
-                        var st = $(window).scrollTop();
-                        
-                        // Make sure they scroll more than delta
-                        if(Math.abs(lastScrollTop - st) <= delta)
-                            return;
-                        
-                        // If they scrolled down and are past the navbar, add class .nav-up.
-                        // This is necessary so you never see what is "behind" the navbar.
-                        if (st > lastScrollTop && st > navbarHeight){
-                            // Scroll Down
-                            $('footer').removeClass('show').addClass('hide');
-                        } else {
-                            // Scroll Up
-                            if(st + $(window).height() < $(document).height()) {
-                                $('footer').removeClass('hide').addClass('show');
-                            }
-                        }
-                        
-                        lastScrollTop = st;
+        $scope.setFormPristine = function(form){
+            console.log('setformPristine', form);
+            if(form.$setValidity) {
+                form.$setValidity();
+            }
+            if(form.$setUntouched) {
+                form.$setUntouched();
+            }
+            if(form.$setPristine){
+                form.$setPristine();
+            } else {
+                form.$pristine = true;
+                form.$dirty = false;
+                angular.forEach(form, function (input, key) {
+                    console.log(input, key);
+                    if (input.$pristine)
+                        input.$pristine = true;
+                    if (input.$dirty) {
+                        input.$dirty = false;
                     }
+                });
+            }
+        };
+
+    }]).directive('contactForm', function() {
+        return {
+            restrict: 'ECA',
+            controller: "contactFormCtrl",
+            link: function(scope, el, attrs, ctrl) {
+                
+            }
+        }
+    }).controller('adminPanelCtrl', ['$scope', '$firebase', function($scope, $firebase) {
+        $scope.usersRef = new Firebase("https://thepolyglot.firebaseio.com/").child('users');
+        $scope.users = $firebase($scope.usersRef).$asObject();
+
+        $scope.user = {};
+
+    }]).directive('adminPanel', function() {
+        return {
+            restrict: 'ECA',
+            controller: "adminPanelCtrl",
+            link: function(scope, el, attrs, ctrl) {
+                
+            }
+        }
+    }).directive('footer', function() {
+        return {
+            restrict: 'ECA',
+            controller: "appCtrl",
+            link: function(scope, el, attrs, ctrl) {
+                var didScroll;
+                var lastScrollTop = 0;
+                var delta = 5;
+                var navbarHeight = $('footer').outerHeight();
+
+                $(window).scroll(function(event){
+                    didScroll = true;
+                });
+
+                setInterval(function() {
+                    if (didScroll) {
+                        hasScrolled();
+                        didScroll = false;
+                    }
+                }, 250);
+
+                function hasScrolled() {
+                    var st = $(window).scrollTop();
+                    
+                    // Make sure they scroll more than delta
+                    if(Math.abs(lastScrollTop - st) <= delta) {
+                        return;
+                    }
+                    
+                    // If they scrolled down and are past the navbar, add class .nav-up.
+                    // This is necessary so you never see what is "behind" the navbar.
+                    if (st > lastScrollTop && st > navbarHeight){
+                        // Scroll Down
+                        $('footer').removeClass('show').addClass('hide');
+                    } else {
+                        // Scroll Up
+                        if(st + $(window).height() < $(document).height()) {
+                            $('footer').removeClass('hide').addClass('show');
+                        }
+                    }
+                    
+                    lastScrollTop = st;
                 }
             }
-        });
+        }
+    });
 
 }());

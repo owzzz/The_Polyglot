@@ -1,0 +1,21 @@
+/* TABLET PORTRAIT
+ *************************************************************/
+@media only screen and (min-device-width : $tablet-portrait-sml) {
+    .contact-form {
+		.form-element:nth-child(1) {
+			clear: none;
+			float: left;
+			width: 50%;
+			padding-right: 1%;
+		}
+
+		.form-element:nth-child(2) {
+			clear: none;
+			float: left;
+			width: 50%;
+			padding-left: 1%;
+		}
+
+		
+	}
+}

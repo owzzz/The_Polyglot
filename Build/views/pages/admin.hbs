@@ -1,0 +1,16 @@
+<ul class="admin-panel">
+	<li>
+		<div class="col col-header">First Name</div>
+		<div class="col col-header">Last Name</div>
+		<div class="col col-header">Email</div>
+		<div class="col col-header">What's it about?</div>
+		<div class="col col-header">How can I help you?</div>
+	</li>
+	<li ng-repeat="user in users">
+		<div class="col">\{{user.firstName}}</div>
+		<div class="col">\{{user.lastName}}</div>
+		<div class="col">\{{user.email}}</div>
+		<div class="col">\{{user.enquiryReason}}</div>
+		<div class="col">\{{user.help}}</div>
+	</li>
+</ul>

@@ -1,0 +1,56 @@
+
+.main-wrapper {
+	width: 100%;
+ 	max-width: $desktop-md;
+ 	margin: 0 auto;
+ 	position: relative;
+}
+
+.main-content {
+	width: 100%;
+	max-width: $tablet-portrait-sml - 68;
+	margin: 80px auto 0 auto;
+	padding: 20px;
+
+	p {
+		text-align: center;
+	}
+
+	&.admin-page {
+		max-width: 100%;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.main-content {
+		margin-top: 0;
+
+		.desktop-left-column,
+		.desktop-right-column {
+			width: 50%;
+			float: left;
+			margin-bottom: 40px;
+		}
+
+		.desktop-left-column {
+			padding-right: 2.5%;
+		}
+		.desktop-right-column {
+			padding-left: 2.5%;
+			text-align: left;
+			
+			p {
+				text-align: left;
+			}
+		}
+
+		.desktop-full-width {
+			display: block;
+			width: 100%;
+			clear:both;
+		}
+	}
+    
+}
