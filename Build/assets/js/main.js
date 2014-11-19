@@ -102,9 +102,9 @@
                 form.$pristine = true;
                 form.$dirty = false;
                 angular.forEach(form, function (input, key) {
-                    console.log(input, key);
-                    if (input.$pristine)
+                    if (input.$pristine) {
                         input.$pristine = true;
+                    }
                     if (input.$dirty) {
                         input.$dirty = false;
                     }
@@ -115,10 +115,7 @@
     }]).directive('contactForm', function() {
         return {
             restrict: 'ECA',
-            controller: "contactFormCtrl",
-            link: function(scope, el, attrs, ctrl) {
-                
-            }
+            controller: "contactFormCtrl"
         }
     }).controller('adminPanelCtrl', ['$scope', '$firebase', function($scope, $firebase) {
         $scope.usersRef = new Firebase("https://thepolyglot.firebaseio.com/").child('users');
