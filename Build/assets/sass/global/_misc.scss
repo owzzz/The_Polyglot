@@ -37,3 +37,16 @@
     25%  {opacity: 1;}
     100%  {opacity: 0;}
 } 
+
+.bg-yellow {
+	@include bg-color($col-yellow);
+}
+.bg-red {
+	@include bg-color($col-red);
+}
+.bg-green {
+	@include bg-color($col-green);
+}
+.bg-blue {
+	@include bg-color($col-blue);
+}

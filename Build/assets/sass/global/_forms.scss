@@ -1,19 +1,19 @@
-
 form {
-	margin-bottom: 40px;
+	margin: 30px 0 21px 0;
 }
 
-input[type=text], input[type=password], input[type=email], textarea {
+input[type=text], input[type=password], input[type=email], textarea {	
 	width: 100%;
-	padding: 12px;
-	margin: 6px 0 4px;
-	border: 1px solid $col-charcoal;
-	background: $col-light-grey;
+	padding: 7px 0;
+	border: none;
+	border-bottom: 1px solid $col-white;;
+	background: #6bd598;
 	font-family: sans-serif;
+	color: $col-white;
 	font-size: 12px;
 	line-height: normal;
-	box-sizing: border-box;
-	border-radius: 2px;
+	margin-bottom: 10px;
+	outline: none;
 }
 
 textarea {
@@ -22,7 +22,7 @@ textarea {
 
 .form-element {
 	clear: both;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 
 	.validation-error {
 		display: none;
@@ -46,6 +46,10 @@ textarea {
 	}
 }
 
+.form-element-last {
+	margin-bottom: 40px;
+}
+
 label {
 	margin-bottom: 10px;
 	span {
@@ -53,8 +57,17 @@ label {
 	}
 }
 
-input[type="submit"] {
+button {
 	cursor: pointer;
+	background: white;
+	border-radius: 21px;
+	border: none;
+	width: 100%;
+	height: 42px;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: $col-green;
+
 	&.btn {
 		background: $col-red;
 		color: $col-white;
@@ -65,6 +78,12 @@ input[type="submit"] {
 		background: $col-white;
 		color: $col-charcoal;
 		border: 1px solid $col-charcoal;	
+	}
+
+	&:hover {
+		background: transparent;
+		border: 2px solid $col-white;
+		color: $col-white;
 	}
 }
 
@@ -77,4 +96,39 @@ input[type="submit"] {
 	text-decoration: none;
 	padding: 15px 32px;
 	display: inline-block;
+}
+
+.button {
+	cursor: pointer;
+	background: $col-charcoal;
+	border-radius: 21px;
+	border: none;
+	margin: 0 13%;
+	width: 74%;
+	height: 42px;
+	padding: 15px;
+	text-transform: uppercase;
+	font-size: 11.5px;
+	text-decoration: none;
+	color: $col-white;
+	display: block;
+
+	&:hover {
+		background: $col-yellow;
+		color: $col-charcoal;
+	}
+}
+
+.btn-warning {
+	background: $col-red;
+	color: $col-white;
+	border: none;
+	border-radius: 0px;
+	position: relative;
+	font-size: 10px;
+	padding: 14px 10px 14px 10px;
+}
+
+::placeholder {
+	color: $col-white;
 }

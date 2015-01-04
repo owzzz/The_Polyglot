@@ -21,6 +21,136 @@ a {
 	font-weight: bold;
 }
 
+h1, h2 {
+	font-family: $secondary-font;
+	span {
+		font-family: $secondary-font-light;
+	}
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 31px;
+}
+
+.about {
+	padding: 19px 39px;
+
+	h2 {
+		background: url("/assets/img/static/globe.png") 50% 30px no-repeat;
+		background-size: 17%;
+		padding-top: 105px;
+		letter-spacing: 2.4px;
+		margin-bottom: 27px;
+	}
+	
+	p {
+		margin-bottom: 20px;
+		line-height: 22px;
+		text-transform: none;
+		letter-spacing: .3px;
+		font-weight: 300;
+		font-style: normal;
+		margin-bottom: 23px;
+	}
+}
+
+.contact {
+	padding: 32px 43px;
+
+	h2 {
+		background: url("/assets/img/static/envelope_blue.png") 50% 22% no-repeat;
+		background-size: 17%;
+		padding-top: 75px;
+		margin-bottom: 37px;
+	}
+
+	strong {
+		font-family: $secondary-font;
+		font-weight: bolder;
+	}
+
+	p {
+		font-size: 19px;
+		line-height: 23px;
+		text-align: center;
+	}
+
+}
+
+.author {
+	h2 {
+		background: url("/assets/img/static/pencil.png") 50% 26% no-repeat;
+		padding-top: 83px;
+		background-size: 16%;
+		margin-bottom: 6px;
+		font-size: 34px;
+
+		strong {
+			font-family: $secondary-font;
+			font-weight: bolder;
+		}	
+	}
+}
+
+section h2 {
+	text-align: center;
+}
+
+section p {
+	text-align: justify;
+
+}
+
+.strapline h2 {
+	font-family: $secondary-font;
+	font-size: 26px;
+	line-height: 41px;
+}
+
+.highlight {
+	padding: 0 5px;
+	font-weight: bold;
+	font-family: $secondary-font;
+}
+
+.highlight-primary {
+	background-color: $col-yellow;
+}
+
+.highlight-secondary {
+	background-color: $col-green;
+}
+
+.logo {
+	background: url("/assets/img/static/logo.png") 49% 0px no-repeat;
+	background-size: 63%;
+	overflow: hidden;
+	text-indent: -999999px;
+	width: 202px;
+	height: 44px;
+	text-align: center;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.label {
+	text-transform: uppercase;
+	font-family: $secondary-font;
+	font-size: 13px;
+
+	a {
+		text-decoration: none;
+		color: $col-white;
+		font-size: 13px;
+
+		&:hover {
+			color: $col-charcoal;
+		}
+	}
+}
+
+
 /* TABLET PORTRAIT
  *************************************************************/
 @media all and (min-width: $tablet-portrait-sml) {
@@ -28,6 +158,10 @@ a {
 		font-size: 18px;
 		line-height: 32px;
 		font-family: $secondary-font-light;
+	}
+
+	.logo {
+		height: 89px;
 	}
 }
 

@@ -1,6 +1,6 @@
 /* TABLET PORTRAIT
  *************************************************************/
-@media only screen and (min-device-width : $tablet-portrait-sml) {
+@media only screen and (min-width : $tablet-portrait-sml) {
     .contact-form {
 		.form-element:nth-child(1) {
 			clear: none;
@@ -14,6 +14,11 @@
 			float: left;
 			width: 50%;
 			padding-left: 1%;
+			margin-bottom: 40px;
+		}
+
+		.form-element:last-child {
+			margin-bottom: 50px;
 		}
 
 		

@@ -1,26 +1,26 @@
 footer {
-	position: fixed;
 	width: 100%;
-	padding: 20px 0;
-	height: 70px;
+	padding: 41px 0 41px 0;
+	height: 104px;
 	background: $col-white;
-	z-index: 0;
 	text-align: center;
-	transition: bottom 0.2s ease-in-out;
 	max-width: $tablet-portrait-sml - 68;
 	margin: 0 auto;
-	
-	&.show {
-		bottom: 0;
-	}
 
-	&.hide {
-		bottom: -70px;
-	}
 
 	p {
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: bold;
+		margin-bottom: 0;
+
+		a {
+			text-decoration: none;
+			font-size: 12px;
+
+			&:hover {
+				color: $col-charcoal;
+			}
+		}
 	}
 
 }

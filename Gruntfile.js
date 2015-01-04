@@ -185,7 +185,8 @@ module.exports = function(grunt) {
                         '.htaccess',
                         'assets/img/**/*.{jpg,png,gif,svg}',
                         'assets/js/vendor/modernizr/modernizr.js',
-                        'assets/fonts/**'
+                        'assets/fonts/**',
+                        'assets/videos/**/*.{mov,mp4}'
                     ]
                 }]
             }

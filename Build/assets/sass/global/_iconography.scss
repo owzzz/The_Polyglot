@@ -1,24 +1,3 @@
 $instagramIcon: "/assets/img/icons/instagram_logo.svg";
 $logoIcon: "/assets/img/icons/mouth_logo.svg";
 $logoText: "/assets/img/icons/type_logo.svg";
-
-.icon-instagram {
-	background: $col-red;
-	color: $col-white;
-	border: none;
-	border-radius: 0px;
-	padding: 14px 10px 14px 38px;
-	position: relative;
-	font-size: 10px;
-
-	&:before {
-		content: "";
-		background: transparent url($instagramIcon) 0 0 no-repeat;
-		background-size: 18px;
-		width: 18px;
-		height: 18px;
-		position: absolute;
-		left: 10px;
-		top: 10px;
-	}
-}

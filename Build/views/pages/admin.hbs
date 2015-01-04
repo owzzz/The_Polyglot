@@ -7,6 +7,9 @@
 		<div class="col col-header">How can I help you?</div>
 	</li>
 	<li ng-repeat="user in users">
+		<div class="col-overlay">
+			<a href="" ng-click="deleteUserDetails(\{{user.id}})" class="btn btn-warning">Delete</a>
+		</div>
 		<div class="col">\{{user.firstName}}</div>
 		<div class="col">\{{user.lastName}}</div>
 		<div class="col">\{{user.email}}</div>
