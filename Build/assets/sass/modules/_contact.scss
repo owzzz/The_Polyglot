@@ -1,0 +1,49 @@
+.contact {
+	background: #4fb779;
+	color: $col-white;
+	padding: 32px 43px;
+	padding: 32px 43px;
+
+	h2 {
+		background: url("../img/static/envelope_blue.png") 50% 22% no-repeat;
+		background-size: 20%;
+		padding-top: 75px;
+		margin-bottom: 37px;
+	}
+
+	strong {
+		font-family: $secondary-font;
+		font-weight: bolder;
+	}
+
+	p {
+		font-size: 19px;
+		line-height: 23px;
+		text-align: center;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.contact {
+		padding: 62px;
+
+		h2 {
+			background-size: 6%;
+			margin-bottom: 47px;
+		}
+
+		p {
+			margin: 0 auto 80px auto;
+			font-size: 24px;
+			line-height: 40px;
+
+		}
+
+		label {
+			font-size: 18px;
+		}
+
+	}
+}

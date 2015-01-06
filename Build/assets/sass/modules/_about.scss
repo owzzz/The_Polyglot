@@ -1,0 +1,59 @@
+.about {
+	background: $col-pink;
+	min-height: 540px;
+	color: $col-white;
+	text-align: left;
+	position: relative;
+	padding: 19px 39px;
+
+	h2 {
+		background: url("../img/static/globe.png") 50% 30px no-repeat;
+		background-size: 20%;
+		padding-top: 105px;
+		letter-spacing: 2.4px;
+		margin-bottom: 27px;
+	}
+	
+	p {
+		margin-bottom: 20px;
+		line-height: 22px;
+		text-transform: none;
+		letter-spacing: .3px;
+		font-weight: 300;
+		font-style: normal;
+		margin-bottom: 23px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -29px;
+		right: 45px;
+		width: 23px;
+		height: 29px;
+		background: transparent url("../img/static/arrow_pink.png") 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.about {
+		padding: 62px;
+
+		h2 {
+			background-size: 6%;
+			margin-bottom: 47px;
+		}
+
+		p {
+			width: 80%;
+			margin: 0 auto 23px auto;
+			font-size: 24px;
+			line-height: 40px;
+			text-align: center;
+		}
+	}
+}

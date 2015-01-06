@@ -7,13 +7,14 @@ input[type=text], input[type=password], input[type=email], textarea {
 	padding: 7px 0;
 	border: none;
 	border-bottom: 1px solid $col-white;;
-	background: #6bd598;
+	background: #4fb779;
 	font-family: sans-serif;
 	color: $col-white;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: normal;
 	margin-bottom: 10px;
 	outline: none;
+	border-radius: 0;
 }
 
 textarea {
@@ -67,6 +68,7 @@ button {
 	text-transform: uppercase;
 	font-size: 12px;
 	color: $col-green;
+	font-family: $secondary-font-semiBold;
 
 	&.btn {
 		background: $col-red;
@@ -103,8 +105,8 @@ button {
 	background: $col-charcoal;
 	border-radius: 21px;
 	border: none;
-	margin: 0 13%;
-	width: 74%;
+	margin: 0 auto;
+	width: 250px;
 	height: 42px;
 	padding: 15px;
 	text-transform: uppercase;
@@ -119,6 +121,10 @@ button {
 	}
 }
 
+.justify {
+	text-align: justify!important;
+}
+
 .btn-warning {
 	background: $col-red;
 	color: $col-white;
@@ -131,4 +137,15 @@ button {
 
 ::placeholder {
 	color: $col-white;
+	font-size: 14px;
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+
+	.button {
+		width: 30%;
+		margin: 0 auto;
+	}
 }

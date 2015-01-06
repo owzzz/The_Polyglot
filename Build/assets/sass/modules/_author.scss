@@ -1,0 +1,67 @@
+.author {
+	background: $col-blue;
+	color: $col-white;
+	text-align: center;
+	padding: 32px 39px 21px 39px;
+
+	.circle {
+		width: 182px;
+		margin: 33px 0 28px 0px;
+	}
+
+	h2 {
+		background: url("../img/static/pencil.png") 50% 26% no-repeat;
+		padding-top: 83px;
+		background-size: 20%;
+		margin-bottom: 6px;
+		font-size: 34px;
+
+		strong {
+			font-family: $secondary-font;
+			font-weight: bolder;
+		}	
+	}
+
+	p {
+		line-height: 21px;
+		margin-bottom: 27px;
+		letter-spacing: -0.1px;
+	}
+
+	p:last-child {
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.author {
+		padding: 62px;
+
+		h2 {
+			background-size: 6%;
+			margin-bottom: 47px;
+		}
+
+		p {
+			width: 80%;
+			margin: 0 auto 23px auto;
+			font-size: 24px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		.circle {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.label {
+			text-align: center;
+			display: block!important;
+			margin: 0 auto;
+		}
+	}
+}

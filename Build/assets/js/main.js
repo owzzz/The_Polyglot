@@ -80,6 +80,12 @@
                     variableWidth: true
                 }); 
 
+                $carousel.find('.video').on('click', function() {
+                    if(!(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))) {
+                        $(this).fadeOut(1000);    
+                    }
+                });
+
                 $carousel.find('.slick-slide').on('click', function() {
                     $(this).find('video').get(0).play();
                 })
