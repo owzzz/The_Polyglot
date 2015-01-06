@@ -7,10 +7,9 @@
 	padding: 19px 39px;
 
 	h2 {
-		background: url("../img/static/globe.png") 50% 30px no-repeat;
-		background-size: 20%;
-		padding-top: 105px;
-		letter-spacing: 2.4px;
+		background: url("../img/static/globe.png") 50% 35px no-repeat;
+		background-size: 40px;
+		padding-top: 102px;
 		margin-bottom: 27px;
 	}
 	
@@ -44,16 +43,20 @@
 		padding: 62px;
 
 		h2 {
-			background-size: 6%;
+			background-size: 50px;
 			margin-bottom: 47px;
 		}
 
 		p {
-			width: 80%;
+			width: 59%;
 			margin: 0 auto 23px auto;
-			font-size: 24px;
-			line-height: 40px;
 			text-align: center;
+			font-size: 21px;
+			line-height: 34px;
+		}
+
+		&:after {
+			display: none;
 		}
 	}
 }

@@ -1,12 +1,12 @@
 <section class="strapline">
-	<h2>Learn the most <br> common <span class="highlight highlight-primary">words</span> in six different <span class="highlight highlight-secondary">languages</span> <br> one word at a time</h2>
+	<h2>Learn the most <br> common <span class="highlight highlight-primary">words</span> in six different <span class="highlight highlight-secondary">languages</span>, <br> one word at a time.</h2>
 </section>
 <section class="carousel">
 	<div class="slider">
-		<div><video src="assets/videos/MP4_Trimmed/2_Water.mp4"></video><img class="video" src="assets/img/static/carousel/Website_words-01.png"/></div>
 		<div><video src="assets/videos/MP4_Trimmed/1_Hello.mp4"></video><img class="video" src="assets/img/static/carousel/Website_words-02.png"/></div>
 		<div><video src="assets/videos/MP4_Trimmed/7_Pencil.mp4"></video><img class="video" src="assets/img/static/carousel/Website_words-03.png"/></div>
 		<div><a href="http://www.instagram.com/the_polyglot"><img src="assets/img/static/carousel/Website_words-04.png" width="220px" height="220px" /></a></div>
+		<div><video src="assets/videos/MP4_Trimmed/2_Water.mp4"></video><img class="video" src="assets/img/static/carousel/Website_words-01.png"/></div>
 	</div>
 	<a href="http://www.instagram.com/the_polyglot" class="button">Follow Us On Instagram</a>
 </section>
@@ -16,8 +16,9 @@
 	<p>The Polyglot is here to teach you how to spell and pronounce the most common words in six different languages.</p>
 	<p>Follow us, so the next time you’re in Spain, you’ll ask for a cerveza instead of a beer.</p>
 </section>
-<section class="strapline stapline-middle">
-	<h2>A <span class="highlight highlight-primary">polyglot</span> is a <br/> person who knows <br/> many <span class="highlight highlight-secondary">languages.</span><br> It's time to be one.</h2>
+<section class="strapline strapline-middle">
+	<h2 class="show-mobile">A <span class="highlight highlight-primary">polyglot</span> is a <br/> person who knows <br/> many <span class="highlight highlight-secondary">languages</span>.<br> It's time to be one.</h2>
+	<h2 class="show-desktop">A <span class="highlight highlight-primary">polyglot</span> is a person<br/> who knows many <span class="highlight highlight-secondary">languages</span>. <br/> It's time to be one.</h2>
 </section>
 <section class="author">
 	<h2><span>the</span> <strong>creative</strong></h2>
@@ -31,23 +32,31 @@
 <section class="social">
 	<ul>
 		<li class="icon-instagram"><a href="http://www.instagram.com/the_polyglot">Instagram</a></li>
-		<li class="icon-facebook"><a href="http://www.facebook.com/the_polyglot">Facebook</a></li>
-		<li class="icon-twitter"><a href="http://www.twitter.com/the_polyglot">Twitter</a></li>
+		<li class="icon-facebook"><a href="https://www.facebook.com/pages/The-Polyglot/485320181610253?ref=br_tf">Facebook</a></li>
+		<li class="icon-twitter"><a href="http://www.twitter.com/the_polyglot_">Twitter</a></li>
 	</ul>
 </section>
 <section class="contact">
 	<h2><span>let's</span> <strong>chat</strong></h2>
 	<p>We’re all about talking, <br> so don’t be shy.</p>
-	<form action="" class="contact-form">
-		<div class="form-element">
-			<input type="text" placeholder="What's your name?" name="name" />	
-		</div>
-		<div class="form-element">
-			<input type="text" placeholder="Can we have your email?" name="email" />	
-		</div>
-		<div class="form-element form-element-last">
-			<input type="text" placeholder="OK tell us how we can help." name="comment" />	
-		</div>
-		<button type="submit">Send It</button>
-	</form>
+	<div class="form-container">
+		<form name="contactForm" ng-submit="submitUserDetails()" class="contact-form">
+			<div class="form-element">	
+				<label for="fullName"></label>
+				<input type="text" id="fullName" name="fullName" placeholder="What's your name?" ng-model="user.fullName" required/>
+				<p class="validation-error">Please enter a name.</p>
+			</div>
+			<div class="form-element">
+				<input type="email" id="email" name="email" placeholder="Can we have your email?" ng-model="user.email" required/>
+				<p class="validation-error">Please enter a valid email.</p>	
+			</div>
+			<div class="form-element form-element-last">
+				<label for="howHelp"></label>
+				<input type="text" ng-model="user.help" id="howHelp" placeholder="Ok, tell us how we can help." name="howHelp" required />
+				<p class="validation-error">Please let me know how I can help.</p>
+			</div>
+			<button type="submit" ng-hide="userCreated" ng-disabled="contactForm.$invalid" class="button button-alt">Send It</button>
+			<span ng-show="userCreated" class="button button-alt button-disabled">Thanks, we got it!</span>
+		</form>
+	</div>
 </section>

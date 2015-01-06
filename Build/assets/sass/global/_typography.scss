@@ -22,15 +22,16 @@ a {
 }
 
 h1, h2 {
-	font-family: $secondary-font;
+	font-family: $tertiary-font-bold;
 	span {
-		font-family: $secondary-font-light;
+		font-family: $tertiary-font-regular;
 	}
 	margin-bottom: 20px;
 }
 
 h2 {
-	font-size: 31px;
+	font-size: 28px;
+	letter-spacing: 1.6px;
 }
 
 
@@ -40,13 +41,13 @@ section h2 {
 
 section p {
 	text-align: left;
-
 }
 
 .highlight {
-	padding: 0 5px;
+	padding: 0 2px;
 	font-weight: bold;
 	font-family: $secondary-font-bold;
+	letter-spacing: -1px;
 }
 
 .highlight-primary {
@@ -97,6 +98,10 @@ section p {
 
 	.logo {
 		height: 89px;
+	}
+
+	.highlight {
+		letter-spacing: 0px;
 	}
 }
 

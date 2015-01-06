@@ -1,29 +1,30 @@
 .strapline {
+	padding-top: 20px;
+
 	h2 {
 		margin: 0;
 		font-family: $secondary-font;
 		font-size: 25px;
 		line-height: 41px;
+		letter-spacing: 0;
 	}
 }
 
 .strapline.strapline-middle {
-	padding: 24px 42px;
-	padding-top: 40px;
-	min-height: 248px;
+	padding: 45px 42px;
 }
 
 
 /* TABLET PORTRAIT
  *************************************************************/
+
 @media all and (min-width: $tablet-portrait-sml) {
 	.strapline {
 		padding-top: 0;
-		margin-bottom: 80px;
 
 		h2 {
-			font-size: 36px;
-			line-height: 61px;
+			font-size: 30px;
+			line-height: 44px;
 		}
 	}
 

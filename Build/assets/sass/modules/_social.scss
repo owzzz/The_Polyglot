@@ -58,5 +58,9 @@
 /* TABLET PORTRAIT
  *************************************************************/
 @media all and (min-width: $tablet-portrait-sml) {
-
+	.social {
+		&:after {
+			display: none;
+		}
+	}
 }

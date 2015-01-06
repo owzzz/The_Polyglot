@@ -74,3 +74,25 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'CenturyGothicRegular';
+	src: url('../fonts/Century_Gothic_Regular/Century_gothic_regular.eot');
+	src: local('☺'), 
+		url('../fonts/Century_Gothic_Regular/Century_gothic_regular.woff') format('woff'), 
+		url('../fonts/Century_Gothic_Regular/Century_gothic_regular.ttf') format('truetype'), 
+		url('../fonts/Century_Gothic_Regular/Century_gothic_regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CenturyGothicBold';
+	src: url('../fonts/Century_Gothic_Bold/Century_gothic_bold.eot');
+	src: local('☺'), 
+		url('../fonts/Century_Gothic_Bold/Century_gothic_bold.woff') format('woff'), 
+		url('../fonts/Century_Gothic_Bold/Century_gothic_bold.ttf') format('truetype'), 
+		url('../fonts/Century_Gothic_Bold/Century_gothic_bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -10,16 +10,10 @@
 	}
 
 	h2 {
-		background: url("../img/static/pencil.png") 50% 26% no-repeat;
-		padding-top: 83px;
-		background-size: 20%;
+		background: url("../img/static/pencil.png") 50% 21px no-repeat;
+		background-size: 40px 35px;
+		padding-top: 82px;
 		margin-bottom: 6px;
-		font-size: 34px;
-
-		strong {
-			font-family: $secondary-font;
-			font-weight: bolder;
-		}	
 	}
 
 	p {
@@ -41,27 +35,27 @@
 		padding: 62px;
 
 		h2 {
-			background-size: 6%;
-			margin-bottom: 47px;
+			background-size: 50px;
+			margin-bottom: 6px;
 		}
 
 		p {
-			width: 80%;
+			width: 59%;
 			margin: 0 auto 23px auto;
-			font-size: 24px;
-			line-height: 40px;
 			text-align: center;
+			font-size: 21px;
+			line-height: 34px;
 		}
 
 		.circle {
 			display: block;
-			margin: 0 auto;
+			margin: 0 auto 27px auto;
 		}
 
 		.label {
 			text-align: center;
 			display: block!important;
-			margin: 0 auto;
+			margin: 0 auto 27px auto;
 		}
 	}
 }
