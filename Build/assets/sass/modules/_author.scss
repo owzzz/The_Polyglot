@@ -26,6 +26,12 @@
 		text-align: center;
 		font-weight: bold;
 	}
+
+	.label {
+		text-align: center;
+		display: block!important;
+		margin: 0 auto 45px auto;
+	}
 }
 
 /* TABLET PORTRAIT
@@ -35,7 +41,7 @@
 		padding: 62px;
 
 		h2 {
-			background-size: 50px;
+			background-size: 43px;
 			margin-bottom: 6px;
 		}
 
@@ -43,19 +49,14 @@
 			width: 59%;
 			margin: 0 auto 23px auto;
 			text-align: center;
-			font-size: 21px;
-			line-height: 34px;
+			font-size: 19px;
+			line-height: 30px;
+			max-width: 499px;
 		}
 
 		.circle {
 			display: block;
-			margin: 0 auto 27px auto;
-		}
-
-		.label {
-			text-align: center;
-			display: block!important;
-			margin: 0 auto 27px auto;
+			margin: 0 auto 45px auto;
 		}
 	}
 }

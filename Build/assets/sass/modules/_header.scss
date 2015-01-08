@@ -10,9 +10,9 @@ header {
 
 /* TABLET PORTRAIT
  *************************************************************/
-@media only screen and (min-width : $tablet-portrait-sml) {
+@media all and (min-width: $tablet-portrait-sml) {
     header {
-		padding: 20px 0 63px 0;
+		padding: 40px 0 40px 0;
 		position: relative;
 		box-shadow: none;
 		max-width: $tablet-portrait-sml - 68;
@@ -22,21 +22,4 @@ header {
 			display : none;
 		}
 	}
-}
-
-
-@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : portrait) {
-
-}
-
-/* TABLET LANDSCAPE
- *************************************************************/
-@media only screen and (min-device-width : $tablet-portrait-sml) and (max-device-width : $tablet-landscape-sml) and (orientation : landscape) {
-
-}
-
-/* DESKTOP
- *************************************************************/
-@media only screen and (min-width: $desktop-sml) {
-
 }

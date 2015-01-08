@@ -1,5 +1,6 @@
 <section class="strapline">
-	<h2>Learn the most <br> common <span class="highlight highlight-primary">words</span> in six different <span class="highlight highlight-secondary">languages</span>, <br> one word at a time.</h2>
+	<h2 class="show-mobile">Learn the most <br> common <span class="highlight highlight-primary">words</span> in six different <span class="highlight highlight-secondary">languages</span>, <br> one word at a time.</h2>
+	<h2 class="show-desktop">Learn the most common <span class="highlight highlight-primary">words</span> in six <br>different <span class="highlight highlight-secondary">languages</span>, one word at a time.</h2>
 </section>
 <section class="carousel">
 	<div class="slider">
@@ -12,9 +13,16 @@
 </section>
 <section class="about">
 	<h2><span>the</span> <strong>polywhat?</strong></h2>
-	<p>Instagram is filled with duckface selfies, feet on the beach, and plenty of food porn. But perhaps, you’d rather learn more than what your friends ate last night.</p>
-	<p>The Polyglot is here to teach you how to spell and pronounce the most common words in six different languages.</p>
-	<p>Follow us, so the next time you’re in Spain, you’ll ask for a cerveza instead of a beer.</p>
+	<div class="show-desktop">
+		<p>Instagram is filled with duckface selfies,<br> feet on the beach, and plenty of food porn. <br> But perhaps, you’d rather learn more than<br> what your friends ate last night.</p>
+		<p>The Polyglot is here to teach you how to <br> spell and pronounce the most common <br>words in six different languages.</p>
+		<p>Follow us, so the next time you’re in Spain,<br> you’ll ask for a cerveza instead of a beer.</p>
+	</div>
+	<div class="show-mobile">
+		<p>Instagram is filled with duckface selfies, feet on the beach, and plenty of food porn. But perhaps, you’d rather learn more than what your friends ate last night.</p>
+		<p>The Polyglot is here to teach you how to spell and pronounce the most common words in six different languages.</p>
+		<p>Follow us, so the next time you’re in Spain, you’ll ask for a cerveza instead of a beer.</p>
+	</div>
 </section>
 <section class="strapline strapline-middle">
 	<h2 class="show-mobile">A <span class="highlight highlight-primary">polyglot</span> is a <br/> person who knows <br/> many <span class="highlight highlight-secondary">languages</span>.<br> It's time to be one.</h2>
@@ -24,10 +32,19 @@
 	<h2><span>the</span> <strong>creative</strong></h2>
 	<span class="label"><a href="http://otaviobarbon.com">Otavio Barbon</a></span>
 	<img src="assets/img/static/headshot.png" alt="" class="circle">
-	<p>My first word as a child was água. It’s been my favorite drink ever since. But a few years ago, I became thirsty for something else.</p>
-	<p>So I packed my bags, waved goodbye to Brazil, and said hello to New York. Trust me, if this city doesn’t sleep, it’s because it never stops talking.</p>
-	<p>With so many languages around me, I felt inspired to learn. And now I want to inspire you.</p>
-	<p class="justify">What will be your first word?</p>
+	
+	<div class="show-desktop">
+		<p>My first word as a child was água. It’s been my<br> favorite drink ever since. But a few years ago,<br> I became thirsty for something else.</p>
+		<p>So I packed my bags, waved goodbye to Brazil, <br>and said hello to New York. Trust me, if this city<br> doesn’t sleep, it’s because it never stops talking. </p>
+		<p>With so many languages around me, I felt <br>inspired to learn. And now I want to inspire you.</p>
+		<p class="justify">What will be your first word?</p>
+	</div>
+	<div class="show-mobile">
+		<p>My first word as a child was água. It’s been my favorite drink ever since. But a few years ago, I became thirsty for something else.</p>
+		<p>So I packed my bags, waved goodbye to Brazil, and said hello to New York. Trust me, if this city doesn’t sleep, it’s because it never stops talking. </p>
+		<p>With so many languages around me, I felt inspired to learn. And now I want to inspire you.</p>
+		<p class="justify">What will be your first word?</p>
+	</div>
 </section>
 <section class="social">
 	<ul>
@@ -53,7 +70,7 @@
 			<div class="form-element form-element-last">
 				<label for="howHelp"></label>
 				<input type="text" ng-model="user.help" id="howHelp" placeholder="Ok, tell us how we can help." name="howHelp" required />
-				<p class="validation-error">Please let me know how I can help.</p>
+				<p class="validation-error">Please let us know how we can help.</p>
 			</div>
 			<button type="submit" ng-hide="userCreated" ng-disabled="contactForm.$invalid" class="button button-alt">Send It</button>
 			<span ng-show="userCreated" class="button button-alt button-disabled">Thanks, we got it!</span>

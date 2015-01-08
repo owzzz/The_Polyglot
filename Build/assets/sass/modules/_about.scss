@@ -40,19 +40,22 @@
  *************************************************************/
 @media all and (min-width: $tablet-portrait-sml) {
 	.about {
-		padding: 62px;
+		padding: 62px 62px 80px 62px;
 
 		h2 {
-			background-size: 50px;
-			margin-bottom: 47px;
+			background-size: 43px;
+			margin-bottom: 50px;
+			background-position-y: 30px;
+			padding-top: 92px;
 		}
 
 		p {
 			width: 59%;
 			margin: 0 auto 23px auto;
 			text-align: center;
-			font-size: 21px;
-			line-height: 34px;
+			font-size: 19px;
+			line-height: 30px;
+			max-width: 499px;
 		}
 
 		&:after {

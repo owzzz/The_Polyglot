@@ -21,6 +21,7 @@
 @media all and (min-width: $tablet-portrait-sml) {
 	.strapline {
 		padding-top: 0;
+		margin-bottom: 40px;
 
 		h2 {
 			font-size: 30px;
@@ -28,13 +29,8 @@
 		}
 	}
 
-	.strapline.stapline-middle {
+	.strapline.strapline-middle {
 		margin-bottom: 0;
 		padding: 62px;
-
-		h2 {
-			width: 80%;
-			margin: 0 auto;
-		}
 	}
 }

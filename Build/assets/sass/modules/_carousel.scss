@@ -21,6 +21,7 @@
 .slick-slide {
 	width: 260px;
 	padding: 20px;
+	cursor: pointer;
 }
 
 .slick-slider {
@@ -53,7 +54,12 @@
  *************************************************************/
 @media all and (min-width: $tablet-portrait-sml) {
 	.slick-slider {
-		margin-bottom: 87px !important;
+		margin-bottom: 67px !important;
+	}
+
+	.carousel {
+		margin: 0 auto;
+		width: 800px;
 	}
 }
 
