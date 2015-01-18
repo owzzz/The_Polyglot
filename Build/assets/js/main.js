@@ -11,7 +11,7 @@
 
 	app.controller('appCtrl', ['$scope', function($scope) {
 
-	}]).controller('contactFormCtrl', ['$scope', '$firebase', function($scope, $firebase) {
+	}]).controller('contactFormCtrl', ['$scope', '$firebase', 'contactService', function($scope, $firebase, contactService) {
         $scope.usersRef = new Firebase("https://thepolyglot.firebaseio.com/").child('users');
         $scope.users = $firebase($scope.usersRef).$asObject();
 
@@ -19,10 +19,13 @@
         $scope.userCreated = false;
 
         $scope.submitUserDetails = function() {
+            console.log('submitDetails');
+            contactService.submitUserDetails($scope.user);
             $scope.usersRef.push($scope.user, function() {
                 $scope.savedUser = angular.copy($scope.user);
                 $scope.userCreated = true;
                 $scope.setFormPristine($scope.contactForm);
+                console.log($scope.user);
                 $scope.user = {};
             });
         };
@@ -50,7 +53,31 @@
             }
         };
 
-    }]).directive('contactForm', function() {
+    }]).service('contactService', function($http) {
+        
+        var submitUserDetails = function(user) {
+
+            if(user) {
+                $http.post('http://localhost:3000/api/emailUser', user).
+                    success(function(data, status, headers, config) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                        console.log('success', arguments);
+                    }).
+                    error(function(data, status, headers, config) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                        console.log('error', arguments);
+                    });    
+            }
+            
+        }
+
+        return {
+            submitUserDetails: submitUserDetails
+        }
+    })
+    .directive('contactForm', function() {
         return {
             restrict: 'ECA',
             controller: "contactFormCtrl"

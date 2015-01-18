@@ -5,10 +5,10 @@ var express   = require('express'),
     path 	  = require('path'),
     nodemailer = require("nodemailer"),
     bodyParser = require('body-parser'),
-    app       = express(),
-	request = require("request"),
-	fs = require('fs'),
-	email   = require("emailjs/email");
+    app        = express(),
+	request	   = require("request"),
+	fs 		   = require('fs'),
+	email      = require("emailjs/email");
 
 
 
@@ -19,6 +19,25 @@ app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'dist')));
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
 
 
 /* BACKEND SERVICES
@@ -31,15 +50,11 @@ app.get('/api', function(req, res) {
  // Create Download Link and Send
 app.post('/api/emailUser', function(req, res) {
 
-	res.setHeader("Access-Control-Allow-Origin", req.headers.origin);
-	res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-	res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-
-	if(req.body.email){
+	if(req.body){
 			// Do funky stuff with body
 		var server  = email.server.connect({
-		   user:     "flapironproductions@gmail.com", 
-		   password: "flapironproductions1", 
+		   user:     "thepolyglot2015@gmail.com", 
+		   password: "Owain2015", 
 		   host:     "smtp.gmail.com", 
 		   tls: {ciphers: "SSLv3"},
 		   timeout: 1000000
@@ -47,9 +62,9 @@ app.post('/api/emailUser', function(req, res) {
 
 
         var message = { 
-           text: 	"test",
+           text: 	req.body.help,
 		   from:    req.body.email, 
-		   to:      "owain.llew@gmail.com",
+		   to:      "otaviobarbon@gmail.com",
 		   subject: "The PolyGlot: Form Submission"
 		};
 
