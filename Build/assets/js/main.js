@@ -19,13 +19,11 @@
         $scope.userCreated = false;
 
         $scope.submitUserDetails = function() {
-            console.log('submitDetails');
             contactService.submitUserDetails($scope.user);
             $scope.usersRef.push($scope.user, function() {
                 $scope.savedUser = angular.copy($scope.user);
                 $scope.userCreated = true;
                 $scope.setFormPristine($scope.contactForm);
-                console.log($scope.user);
                 $scope.user = {};
             });
         };
@@ -62,12 +60,10 @@
                     success(function(data, status, headers, config) {
                     // this callback will be called asynchronously
                     // when the response is available
-                        console.log('success', arguments);
                     }).
                     error(function(data, status, headers, config) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
-                        console.log('error', arguments);
                     });    
             }
             
