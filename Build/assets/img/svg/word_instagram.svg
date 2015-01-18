@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{font-family:'ProximaNova-Regular';}
+	.st1{font-family:'ProximaNova-Bold';}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#EB6D82;}
+	.st3{letter-spacing:-1;}
+	.st4{opacity:0.6;fill-rule:evenodd;clip-rule:evenodd;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:none;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#5F75A0;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#FFD350;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st10{font-size:76;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#6BD598;}
+]]>
+</style>
+<font horiz-adv-x="1000">
+<!-- Copyright (c) Mark Simonson, 2005. All rights reserved. -->
+<!-- Copyright: Copyright 2015 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="ProximaNova-Regular" units-per-em="1000" underline-position="-133" underline-thickness="20"/>
+<missing-glyph horiz-adv-x="507" d="M429,-90l0,842l-351,0l0,-842M397,-60l-288,0l0,782l288,0z"/>
+<glyph unicode="I" horiz-adv-x="239" d="M161,0l0,667l-83,0l0,-667z"/>
+<glyph unicode="W" horiz-adv-x="883" d="M678,0l191,667l-93,0l-147,-556l-153,556l-69,0l-153,-556l-148,556l-92,0l190,-667l90,0l147,538l147,-538z"/>
+<glyph unicode="a" horiz-adv-x="528" d="M452,0l0,332C452,449 368,495 265,495C186,495 124,469 72,415l35,-52C150,410 197,430 255,430C325,430 377,393 377,329l0,-87C338,286 283,307 217,307C135,307 49,257 49,148C49,43 136,-12 217,-12C282,-12 338,11 377,55l0,-55M245,42C174,42 125,86 125,148C125,209 174,253 245,253C297,253 348,233 377,194l0,-92C348,62 297,42 245,42z"/>
+<glyph unicode="d" horiz-adv-x="575" d="M500,0l0,667l-75,0l0,-257C386,463 327,495 262,495C136,495 47,396 47,241C47,84 136,-12 262,-12C330,-12 389,23 425,72l0,-72M281,55C183,55 125,134 125,241C125,348 183,428 281,428C340,428 399,392 425,350l0,-218C399,90 340,55 281,55z"/>
+<glyph unicode="e" horiz-adv-x="563" d="M294,-12C372,-12 437,15 486,63l-36,49C411,72 356,50 300,50C196,50 133,126 127,217l390,0l0,19C517,381 431,495 285,495C147,495 47,382 47,242C47,91 150,-12 294,-12M443,273l-317,0C130,346 181,433 284,433C394,433 442,344 443,273z"/>
+<glyph unicode="g" horiz-adv-x="575" d="M269,-196C387,-196 500,-146 500,7l0,476l-75,0l0,-73C386,463 327,495 262,495C135,495 47,399 47,244C47,88 136,-6 262,-6C330,-6 389,31 425,80l0,-73C425,-95 349,-134 269,-134C200,-134 152,-116 112,-69l-38,-54C132,-180 188,-196 269,-196M281,61C183,61 125,138 125,244C125,351 183,428 281,428C340,428 398,392 425,351l0,-212C398,97 340,61 281,61z"/>
+<glyph unicode="l" horiz-adv-x="225" d="M150,0l0,667l-75,0l0,-667z"/>
+<glyph unicode="m" horiz-adv-x="808" d="M733,0l0,349C733,446 686,495 598,495C528,495 463,449 436,405C422,455 380,495 307,495C235,495 171,444 150,413l0,70l-75,0l0,-483l75,0l0,353C176,392 228,428 277,428C341,428 366,389 366,328l0,-328l75,0l0,354C466,393 519,428 569,428C632,428 658,389 658,328l0,-328z"/>
+<glyph unicode="n" horiz-adv-x="552" d="M476,0l0,339C476,444 423,495 323,495C250,495 184,454 150,413l0,70l-75,0l0,-483l75,0l0,353C179,392 234,428 293,428C358,428 402,402 402,316l0,-316z"/>
+<glyph unicode="o" horiz-adv-x="572" d="M286,-12C433,-12 525,102 525,242C525,382 433,495 286,495C139,495 47,382 47,242C47,102 139,-12 286,-12M286,55C183,55 126,143 126,242C126,340 183,428 286,428C389,428 446,340 446,242C446,143 389,55 286,55z"/>
+<glyph unicode="." horiz-adv-x="231" d="M115,-10C145,-10 170,15 170,45C170,75 145,100 115,100C85,100 60,75 60,45C60,15 85,-10 115,-10z"/>
+<glyph unicode="?" horiz-adv-x="462" d="M203,185l61,27C247,224 238,244 238,260C238,358 431,371 431,522C431,608 357,677 235,677C140,677 66,638 18,575l50,-54C105,571 152,603 228,603C306,603 345,560 345,510C345,404 165,394 165,267C165,236 176,208 203,185M224,-10C254,-10 279,15 279,45C279,75 254,100 224,100C194,100 169,75 169,45C169,15 194,-10 224,-10z"/>
+<glyph unicode="r" horiz-adv-x="330" d="M150,0l0,342C172,381 235,419 282,419C293,419 302,418 311,417l0,77C245,494 189,456 150,406l0,77l-75,0l0,-483z"/>
+<glyph unicode="s" horiz-adv-x="465" d="M229,-12C353,-12 418,53 418,134C418,322 119,253 119,358C119,401 160,434 226,434C289,434 341,408 370,373l35,52C367,464 309,495 226,495C111,495 47,432 47,356C47,177 346,249 346,132C346,84 305,49 231,49C165,49 104,81 72,118l-38,-54C83,13 149,-12 229,-12z"/>
+<glyph unicode=" " horiz-adv-x="259"/>
+<glyph unicode="t" horiz-adv-x="294" d="M198,-12C241,-12 268,1 287,19l-22,57C255,65 236,55 214,55C182,55 166,81 166,117l0,300l98,0l0,66l-98,0l0,132l-76,0l0,-132l-80,0l0,-66l80,0l0,-316C90,29 126,-12 198,-12z"/>
+<glyph unicode="w" horiz-adv-x="734" d="M569,0l154,483l-79,0l-118,-385l-126,385l-65,0l-127,-385l-118,385l-78,0l154,-483l75,0l126,388l126,-388z"/>
+</font>
+
+	<font horiz-adv-x="1000">
+<!-- Copyright (c) Mark Simonson, 2005. All rights reserved. -->
+<!-- Copyright: Copyright 2015 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="ProximaNova-Bold" units-per-em="1000" underline-position="-133" underline-thickness="20"/>
+<missing-glyph horiz-adv-x="483" d="M417,-90l0,842l-351,0l0,-842M385,-60l-288,0l0,782l288,0z"/>
+<glyph unicode="F" horiz-adv-x="571" d="M208,0l0,277l323,0l0,125l-323,0l0,140l330,0l0,125l-472,0l0,-667z"/>
+<glyph unicode="l" horiz-adv-x="253" d="M190,0l0,667l-127,0l0,-667z"/>
+<glyph unicode="o" horiz-adv-x="575" d="M287,-12C447,-12 543,105 543,242C543,379 447,495 287,495C128,495 32,379 32,242C32,105 128,-12 287,-12M287,101C208,101 164,166 164,242C164,317 208,382 287,382C367,382 411,317 411,242C411,166 367,101 287,101z"/>
+<glyph unicode="s" horiz-adv-x="477" d="M237,-12C371,-12 447,53 447,142C447,337 160,277 160,348C160,375 190,395 236,395C295,395 350,369 379,339l51,90C382,467 317,495 236,495C108,495 38,424 38,343C38,153 324,218 324,139C324,109 298,88 243,88C183,88 112,121 76,155l-55,-92C72,16 153,-12 237,-12z"/>
+<glyph unicode=" " horiz-adv-x="257"/>
+<glyph unicode="u" horiz-adv-x="579" d="M516,0l0,483l-127,0l0,-327C367,128 328,101 279,101C225,101 190,123 190,190l0,293l-127,0l0,-343C63,46 113,-12 219,-12C298,-12 356,25 389,61l0,-61z"/>
+<glyph unicode="w" horiz-adv-x="770" d="M623,0l147,483l-133,0l-90,-325l-106,325l-113,0l-106,-325l-90,325l-132,0l147,-483l136,0l102,329l102,-329z"/>
+</font>
+
+	<rect class="st7" width="612" height="612"/>
+<g>
+	<rect x="51.8" y="144" class="st6" width="508.5" height="324.1"/>
+	<text transform="matrix(1 0 0 1 93.2422 194.6494)"><tspan x="0" y="0" class="st5 st0 st10 st3">Want to learn </tspan><tspan x="4.9" y="81" class="st5 st0 st10 st3">more words?</tspan><tspan x="55.1" y="162" class="st5 st1 st10 st3">Follow us</tspan><tspan x="-3.1" y="243" class="st5 st0 st10 st3">on Instagram.</tspan></text>
+</g>
+</svg>

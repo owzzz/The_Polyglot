@@ -1,0 +1,67 @@
+.social {
+	padding: 50px;
+	position: relative;
+	ul {
+		overflow: hidden;
+		margin: 0 auto;
+		display: block;
+		width: 177px;
+
+		li {
+			float: left;
+			width: 30px;
+			display: inline-block;
+			height: 29px;
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.icon-facebook {
+				background: url("../img/svg/social_facebook.svg") 0 0 no-repeat;
+				background-size: 90%;
+			}
+
+			&.icon-twitter {
+				background: url("../img/svg/social_twitter.svg") 0 0 no-repeat;
+				background-size: 90%;
+			}
+
+			&.icon-instagram {
+				background: url("../img/svg/social_instagram.svg") 0 0 no-repeat;
+				background-size: 90%;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-indent: -999999px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -29px;
+		right: 45px;
+		width: 23px;
+		height: 29px;
+		background: transparent url("../img/static/arrow_white.png") 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.social {
+		&:after {
+			display: none;
+		}
+	}
+}

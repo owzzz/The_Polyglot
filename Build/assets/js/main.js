@@ -71,18 +71,53 @@
             restrict: 'ECA',
             link: function(scope, elem, attrs) {
                 var $carousel = $('.slider');
+                var isVideoPlaying = false;
 
                 $carousel.slick({
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 3,
                     arrows: false,
-                    variableWidth: true
-                }); 
+                    variableWidth: true,
+                    onBeforeChange: function() {
+                        $('.carousel .slick-slide').find('video').each(function() {
+                            this.pause();
+                        }); 
+                    },
+                    onAfterChange: function() {
+                        if($('.carousel .slick-slide').not('.slick-center').find('video')){
+                            $('.carousel .slick-slide').not('.slick-center').find('video').each(function(){
+                                $(this).siblings('.video').fadeIn(500);
+                                this.pause();
+                                this.currentTime = 0;
+                            });
+                        }
+                    }
+                });  
+                
+
+                $carousel.find('.video').on('click', function() {
+                    if(!(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))) {
+                        $(this).fadeOut(1000);    
+                    }
+                });
 
                 $carousel.find('.slick-slide').on('click', function() {
-                    $(this).find('video').get(0).play();
-                })
+                    $('.carousel .slick-slide').find('video').each(function(){
+                        this.pause();
+                        this.currentTime = 0;
+                    });
+
+                    var rawVideo = $(this).find('video').get(0);
+
+                    if (isVideoPlaying) {
+                        rawVideo.pause();
+                        isVideoPlaying = false;
+                    } else {
+                        rawVideo.play();
+                        isVideoPlaying = true;
+                    }
+                });
             }
         }
     });

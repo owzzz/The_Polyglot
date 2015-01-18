@@ -203,7 +203,8 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     layout: '<%= thePolyGlot.buildPath %>/views/layouts/default.hbs',
-                    data: ['<%= thePolyGlot.buildPath %>/views/data/**/*.json']
+                    data: ['<%= thePolyGlot.buildPath %>/views/data/**/*.json'],
+                    flatten: true
                 },
                 files: {
                     '<%= thePolyGlot.distributionPath %>/': ['<%= thePolyGlot.buildPath %>/views/pages/**/*.hbs'],

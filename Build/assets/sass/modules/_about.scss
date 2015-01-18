@@ -1,0 +1,65 @@
+.about {
+	background: $col-pink;
+	min-height: 540px;
+	color: $col-white;
+	text-align: left;
+	position: relative;
+	padding: 19px 39px;
+
+	h2 {
+		background: url("../img/svg/icon_globe.svg") 50% 35px no-repeat;
+		background-size: 40px;
+		padding-top: 102px;
+		margin-bottom: 27px;
+	}
+	
+	p {
+		margin-bottom: 20px;
+		line-height: 22px;
+		text-transform: none;
+		letter-spacing: .3px;
+		font-weight: 300;
+		font-style: normal;
+		margin-bottom: 23px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -29px;
+		right: 45px;
+		width: 23px;
+		height: 29px;
+		background: transparent url("../img/static/arrow_pink.png") 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.about {
+		padding: 62px 62px 80px 62px;
+
+		h2 {
+			background-size: 43px;
+			margin-bottom: 50px;
+			background-position-y: 30px;
+			padding-top: 92px;
+		}
+
+		p {
+			width: 59%;
+			margin: 0 auto 23px auto;
+			text-align: center;
+			font-size: 19px;
+			line-height: 30px;
+			max-width: 499px;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.contact {
+	background: #4fb779;
+	color: $col-white;
+	padding: 32px 43px;
+	padding: 32px 43px;
+
+	h2 {
+		background: url("../img/svg/icon_mail.svg") 50% 22px no-repeat;
+		background-size: 40px;
+		padding-top: 74px;
+		margin-bottom: 27px;
+	}
+
+	p {
+		font-size: 19px;
+		line-height: 23px;
+		text-align: center;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.contact {
+		padding: 62px;
+
+		h2 {
+			background-size: 43px;
+			margin-bottom: 47px;
+			padding-top: 80px;
+		}
+
+		p {
+			margin: 0 auto 67px auto;
+			font-size: 23px;
+			line-height: 30px;
+
+		}
+
+		label {
+			font-size: 18px;
+		}
+
+	}
+}

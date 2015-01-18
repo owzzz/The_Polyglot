@@ -21,9 +21,45 @@
 .slick-slide {
 	width: 260px;
 	padding: 20px;
+	cursor: pointer;
 }
 
 .slick-slider {
-	margin-bottom: 47px!important;
+	margin-bottom: 32px!important;
+}
+
+.carousel {
+	overflow: hidden;
+	padding: 18px 32px 52px 32px !important;
+}
+
+.video {
+	width: 220px;
+	height: 220px;
+}
+
+.slider {
+	div {
+		position: relative;	
+	}
+	.video {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		z-index:9;
+	}
+}
+
+/* TABLET PORTRAIT
+ *************************************************************/
+@media all and (min-width: $tablet-portrait-sml) {
+	.slick-slider {
+		margin-bottom: 67px !important;
+	}
+
+	.carousel {
+		margin: 0 auto;
+		width: 800px;
+	}
 }
 

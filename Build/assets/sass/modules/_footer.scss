@@ -11,11 +11,15 @@ footer {
 	p {
 		font-size: 12px;
 		font-weight: bold;
+		font-family: $secondary-font-semiBold;
 		margin-bottom: 0;
+		letter-spacing: 0;
 
 		a {
 			text-decoration: none;
 			font-size: 12px;
+			font-family: $secondary-font-semiBold;
+			color: #4fb779;
 
 			&:hover {
 				color: $col-charcoal;
