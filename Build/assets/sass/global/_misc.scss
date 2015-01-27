@@ -60,9 +60,27 @@
 	display: none;
 }
 
+.show-touch {
+	display: none;
+}
+
+.hide-touch {
+	display: block;
+}
+
+.touch {
+	.show-touch {
+		display: block;
+	}
+
+	.hide-touch {
+		display:none;
+	}
+}
+
 /* TABLET PORTRAIT
  *************************************************************/
-@media all and (min-width: $tablet-portrait-sml) {
+@media all and (min-width: $tablet-landscape-sml) {
 	.show-desktop {
 		display: block;
 	}

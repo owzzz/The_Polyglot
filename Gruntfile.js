@@ -93,15 +93,12 @@ module.exports = function(grunt) {
         // Compass
         // https://github.com/gruntjs/grunt-contrib-compass
         compass: {
-            options: {
-                generatedImagesDir: '<%= thePolyGlot.distributionPath %>',
-                httpImagesPath: '<%= thePolyGlot.distributionPath %>/assets/img',
-                httpGeneratedImagesPath: '<%= thePolyGlot.distributionPath %>/assets/img',
-                httpFontsPath: '<%= thePolyGlot.distributionPath %>/assets/fonts',
-                relativeAssets: false
-            },
             build: {
                 options: {
+                    generatedImagesDir: '<%= thePolyGlot.distributionPath %>',
+                    httpImagesPath: '<%= thePolyGlot.distributionPath %>/assets/img',
+                    httpGeneratedImagesPath: '<%= thePolyGlot.distributionPath %>/assets/img',
+                    httpFontsPath: '<%= thePolyGlot.distributionPath %>/assets/fonts',
                     cssDir: '<%= thePolyGlot.distributionPath %>/assets/css',
                     specify: ['<%= thePolyGlot.buildPath %>/assets/sass/main.scss'],
                     sassDir: '<%= thePolyGlot.buildPath %>/assets/sass',

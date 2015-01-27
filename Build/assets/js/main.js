@@ -5,6 +5,7 @@
 	*********************************************************************/
 	/* angular */  		   require('angular');
 	/* angular Route */	   require('angular-route');
+                           require('elastic');
 
 
 	var app = angular.module('thePolyGlot', ['ngRoute', 'firebase']);
@@ -56,7 +57,7 @@
         var submitUserDetails = function(user) {
 
             if(user) {
-                $http.post('http://the-polyglot.herokuapp.com/api/emailUser', user).
+                $http.post('http://localhost:3000/api/emailUser', user).
                     success(function(data, status, headers, config) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -66,7 +67,6 @@
                     // or server returns response with an error status.
                     });    
             }
-            
         }
 
         return {
@@ -76,7 +76,10 @@
     .directive('contactForm', function() {
         return {
             restrict: 'ECA',
-            controller: "contactFormCtrl"
+            controller: "contactFormCtrl",
+            link: function($scope, elem, attrs) {
+                $(elem).find('textarea').elastic();
+            }
         }
     }).controller('adminPanelCtrl', ['$scope', '$firebase', function($scope, $firebase) {
         $scope.usersRef = new Firebase("https://thepolyglot.firebaseio.com/").child('users');
@@ -110,7 +113,7 @@
                     onAfterChange: function() {
                         if($('.carousel .slick-slide').not('.slick-center').find('video')){
                             $('.carousel .slick-slide').not('.slick-center').find('video').each(function(){
-                                $(this).siblings('.video').fadeIn(500);
+                                $(this).siblings('.video-overlay').fadeIn(500);
                                 this.pause();
                                 this.currentTime = 0;
                             });
@@ -119,10 +122,8 @@
                 });  
                 
 
-                $carousel.find('.video').on('click', function() {
-                    if(!(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))) {
-                        $(this).fadeOut(1000);    
-                    }
+                $carousel.find('.video-overlay').on('click', function() {
+                    $(this).fadeOut(1000);    
                 });
 
                 $carousel.find('.slick-slide').on('click', function() {

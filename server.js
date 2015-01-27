@@ -17,7 +17,7 @@ var express   = require('express'),
 
 app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(function (req, res, next) {
@@ -60,12 +60,11 @@ app.post('/api/emailUser', function(req, res) {
 		   timeout: 1000000
 		});
 
-
         var message = { 
-           text: 	req.body.help,
-		   from:    req.body.email, 
+           text: 	"Email: " + req.body.email + " Comment: " + req.body.help,
+		   from:    req.body.fullName + "<" + req.body.email + ">", 
 		   to:      "otaviobarbon@gmail.com",
-		   subject: "The PolyGlot: Form Submission"
+		   subject: "The PolyGlot: Form Submission from " + req.body.fullName
 		};
 
 		// send the message and get a callback with an error or details of the message that was sent

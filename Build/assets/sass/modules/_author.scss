@@ -30,7 +30,8 @@
 	.label {
 		text-align: center;
 		display: block!important;
-		margin: 0 auto 55px auto;
+		margin: 0 auto 2px auto;
+		font-weight: normal;
 
 		a {
 			font-weight: normal;
@@ -56,6 +57,11 @@
 			line-height: 30px;
 			max-width: 499px;
 		}
+
+		.label {
+			margin: 0px auto 48px auto;
+		}
+
 		a {
 			display: inline;
 

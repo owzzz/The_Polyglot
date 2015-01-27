@@ -33,7 +33,7 @@
 	padding: 18px 32px 52px 32px !important;
 }
 
-.video {
+.video-overlay {
 	width: 220px;
 	height: 220px;
 }
@@ -42,7 +42,7 @@
 	div {
 		position: relative;	
 	}
-	.video {
+	.video-overlay {
 		position: absolute;
 		top: 20px;
 		left: 20px;
@@ -59,7 +59,7 @@
 
 	.carousel {
 		margin: 0 auto;
-		width: 800px;
+		max-width: 768px;
 	}
 }
 
