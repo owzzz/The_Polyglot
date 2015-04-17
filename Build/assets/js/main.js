@@ -57,7 +57,7 @@
         var submitUserDetails = function(user) {
 
             if(user) {
-                $http.post('http://localhost:3000/api/emailUser', user).
+                $http.post('http://the-polyglot.herokuapp.com/api/emailUser', user).
                     success(function(data, status, headers, config) {
                     // this callback will be called asynchronously
                     // when the response is available

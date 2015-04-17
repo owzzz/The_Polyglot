@@ -22,16 +22,34 @@ a {
 }
 
 h1, h2 {
-	font-family: $tertiary-font-bold;
-	span {
-		font-family: $tertiary-font-regular;
-	}
+	font-family: $tertiary-font-regular;
 	margin-bottom: 20px;
 }
 
 h2 {
-	font-size: 28px;
+	font-size: 26px;
 	letter-spacing: 1.6px;
+}
+
+.solid-bg-section {
+	color: $col-white;
+	text-align: left;
+	position: relative;
+	padding: 19px 39px;
+	border-radius: 15px;
+ 	margin: 6px;
+}
+
+.solid-bg-section h2 {
+	margin-bottom: 11px!important;
+}
+
+.solid-bg-section h2 + .label {
+	text-align: center;
+	display: block !important;
+ 	margin: 0 auto 30px auto!important;
+	font-weight: normal;
+	letter-spacing: 0.7px;
 }
 
 
@@ -46,7 +64,7 @@ section p {
 .highlight {
 	padding: 0 2px;
 	font-weight: bold;
-	font-family: $secondary-font-bold;
+	font-family: $tertiary-font-bold;
 	letter-spacing: -1px;
 }
 
@@ -60,14 +78,16 @@ section p {
 
 .logo {
 	background: url("../img/svg/logo.svg") 49% 0px no-repeat;
-	background-size: 63%;
-	overflow: hidden;
-	text-indent: -999999px;
-	width: 202px;
-	height: 44px;
-	text-align: center;
-	width: 320px;
-	margin: 30px auto 0 auto;
+	  background-size: 74%;
+	  overflow: hidden;
+	  text-indent: -999999px;
+	  width: 202px;
+	  height: 52px;
+	  text-align: center;
+	  width: 320px;
+	  margin: 30px auto 15px auto;
+
+
 }
 
 .label {

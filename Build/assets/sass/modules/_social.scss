@@ -1,36 +1,36 @@
 .social {
-	padding: 50px;
+	padding: 30px;
 	position: relative;
 	ul {
 		overflow: hidden;
 		margin: 0 auto;
 		display: block;
-		width: 177px;
+		width: 216px;	;
 
 		li {
 			float: left;
-			width: 30px;
+			width: 28px;
 			display: inline-block;
-			height: 29px;
-			margin-right: 40px;
+			height: 28px;
+			margin-right: 66px;
 
 			&:last-child {
 				margin-right: 0;
 			}
 
 			&.icon-facebook {
-				background: url("../img/svg/social_facebook.svg") 0 0 no-repeat;
-				background-size: 90%;
+				background: url("../img/svg/social_facebook.svg") 8px 3px no-repeat;
+  				background-size: 42%;
 			}
 
 			&.icon-twitter {
-				background: url("../img/svg/social_twitter.svg") 0 0 no-repeat;
-				background-size: 90%;
+				background: url("../img/svg/social_twitter.svg") 0px 4px no-repeat;
+  				background-size: 100%;
 			}
 
 			&.icon-instagram {
-				background: url("../img/svg/social_instagram.svg") 0 0 no-repeat;
-				background-size: 90%;
+				background: url("../img/svg/social_instagram.svg") 3px 1px no-repeat;
+				background-size: 79%;
 			}
 
 			a {
@@ -42,17 +42,6 @@
 				cursor: pointer;
 			}
 		}
-	}
-
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: -29px;
-		right: 45px;
-		width: 23px;
-		height: 29px;
-		background: transparent url("../img/static/arrow_white.png") 0 0 no-repeat;
-		background-size: 100% 100%;
 	}
 }
 

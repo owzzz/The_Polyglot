@@ -1,15 +1,12 @@
 .about {
 	background: $col-pink;
 	min-height: 540px;
-	color: $col-white;
-	text-align: left;
-	position: relative;
-	padding: 19px 39px;
+
 
 	h2 {
-		background: url("../img/svg/icon_globe.svg") 50% 35px no-repeat;
+		background: url("../img/svg/icon_globe.svg") 50% 24px no-repeat;
 		background-size: 40px;
-		padding-top: 102px;
+		padding-top: 90px;
 		margin-bottom: 27px;
 	}
 	
@@ -26,12 +23,12 @@
 	&:after {
 		content: "";
 		position: absolute;
-		bottom: -29px;
-		right: 45px;
-		width: 23px;
-		height: 29px;
-		background: transparent url("../img/static/arrow_pink.png") 0 0 no-repeat;
-		background-size: 100% 100%;
+		bottom: -39px;
+		right: 23px;
+		width: 50px;
+		height: 39px;
+		background: transparent url("../img/svg/bubble_tip.svg") 0 0 no-repeat;
+		background-size: 66%;
 	}
 }
 

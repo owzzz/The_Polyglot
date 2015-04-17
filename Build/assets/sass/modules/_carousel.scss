@@ -25,12 +25,12 @@
 }
 
 .slick-slider {
-	margin-bottom: 32px!important;
+	margin-bottom: 22px!important;
 }
 
 .carousel {
 	overflow: hidden;
-	padding: 18px 32px 52px 32px !important;
+	padding: 18px 32px 42px 32px !important;
 }
 
 .video-overlay {
@@ -48,6 +48,10 @@
 		left: 20px;
 		z-index:9;
 	}
+}
+
+@media all and (min-width: 375px) {
+	
 }
 
 /* TABLET PORTRAIT
